@@ -15,20 +15,22 @@ to activate the virtual environment created by `pipenv`
 Installation / Usage
 --------------------
 
-Clone the repo:
+1. Clone the repo and install
 
-```
-git clone https://github.com/deeuu/xonsh-pipenv.git
-xpip install ./xonsh-pipenv
-```
+    ```
+    git clone https://github.com/deeuu/xonsh-pipenv.git
+    xpip install ./xonsh-pipenv
+    ```
 
-1. Set `$AUTO_PIPENV` to `True` to turn on auto activation.
+2. Add `xontrib load xonsh-pipenv` to your `.xonshrc`
 
-2. Now move to a `pipenv` project directory and watch `vox` automatically
+3. To turn on auto activation with `$AUTO_PIPENV = True`
+
+4. Now move to a `pipenv` project directory and watch `vox` automatically
    activate the virtual environment. Move to a second `pipenv` project and the
-   virtual environment will switch.
+   virtual environment will switch
 
-3. Use `vox deactivate` to deactivate
+5. Use `vox deactivate` to deactivate
 
 Note:
 If you just want to activate a `pipenv` virtual environment, use the alias
