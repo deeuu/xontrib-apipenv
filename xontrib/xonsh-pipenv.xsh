@@ -1,5 +1,6 @@
 import os
 
+
 class PipenvActivator():
     def __init__(self):
         self.pipenv_path = None
@@ -28,7 +29,13 @@ class PipenvActivator():
 _pa = PipenvActivator()
 aliases['vox-activate-pipenv'] = _pa._activate
 
+
 @events.on_chdir
 def _auto_pipenv(olddir, newdir, **kw):
-    if $AUTO_PIPENV and os.path.exists(os.path.join(newdir, 'Pipfile')):
+
+    if (
+            'AUTO_PIPENV' in ${...} and
+            $AUTO_PIPENV and
+            os.path.exists(os.path.join(newdir, 'Pipfile'))
+    ):
         _pa._activate()
