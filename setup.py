@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='xontrib-xonsh-pipenv',
-    version='0.1.1',
+    version='0.2.0',
     url='https://github.com/deeuu/xonsh-pipenv',
     license='MIT',
     author='Dominic Ward',
