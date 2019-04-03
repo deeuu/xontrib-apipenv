@@ -18,7 +18,7 @@ Installation / Usage
 1. Clone the repo and install
 
     ```
-    git clone https://github.com/deeuu/xonsh-pipenv.git
+    git clone https://github.com/deeuu/xontrib-pipenv.git
     xpip install ./xonsh-pipenv
     ```
 
