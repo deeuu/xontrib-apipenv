@@ -1,11 +1,12 @@
 import os
+import pathlib
+from pipenv.project import Project
+from pipenv.core import do_where
 
 
 class PipenvActivator():
     def __init__(self):
-
-        self.pipenv_path = None
-
+        self.pipenv_proj_path = None
         self._activate()
 
     def _activate(self, adir=None):
@@ -13,32 +14,34 @@ class PipenvActivator():
         if adir is None:
             adir = $PWD
 
-        pipfile_exists = os.path.exists(os.path.join(adir, 'Pipfile'))
+        adir = pathlib.Path(adir)
 
         if 'VIRTUAL_ENV' in ${...}:
 
-            if self.pipenv_path and $PWD.startswith(self.pipenv_path):
+            if (
+                self.pipenv_proj_path and
+                self.pipenv_proj_path == adir or
+                self.pipenv_proj_path in adir.parents
+            ):
                 return
             else:
                 $(vox deactivate)
-                self.pipenv_path = None
+                self.pipenv_proj_path = None
 
-        if not pipfile_exists:
+        project = Project(chdir=False)
+
+        exists = project.virtualenv_exists
+
+        if not exists:
             return
 
-        venv_path = $(pipenv --venv).strip()
-        if not venv_path:
-            print(
-                "xonsh-pipenv: "
-                "Pipfile found but no virtual environment for this project"
-            )
-            return
+        venv_path = project.virtualenv_location
 
         venv_root, venv_name = os.path.split(venv_path)
 
         with ${...}.swap(VIRTUALENV_HOME=venv_root):
 
-            self.pipenv_path = $PWD
+            self.pipenv_proj_path = pathlib.Path(project.pipfile_location).parent
 
             vox activate @(venv_name)
 
