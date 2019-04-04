@@ -1,4 +1,4 @@
-# xonsh-pipenv
+# xonsh-apipenv
 
 Automatically activate a [`pipenv`](https://github.com/pypa/pipenv)
 virtual environment when changing `pipenv` project directories.
@@ -18,11 +18,11 @@ Installation / Usage
 1. Clone the repo and install
 
     ```
-    git clone https://github.com/deeuu/xontrib-pipenv.git
-    xpip install ./xonsh-pipenv
+    git clone https://github.com/deeuu/xontrib-apipenv.git
+    xpip install ./xonsh-apipenv
     ```
 
-2. Add `xontrib load xonsh-pipenv` to your `.xonshrc`
+2. Add `xontrib load xonsh-apipenv` to your `.xonshrc`
 
 3. To turn on auto activation with `$AUTO_PIPENV = True`
 
