@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='xontrib-xonsh-apipenv',
-    version='0.2.0',
+    version='0.3.0',
     url='https://github.com/deeuu/xonsh-apipenv',
     license='MIT',
     author='Dominic Ward',
@@ -12,4 +12,5 @@ setup(
     package_dir={'xontrib': 'xontrib'},
     package_data={'xontrib': ['*.xsh']},
     platforms='any',
+    install_requires=['pipenv>=2018.11.26'],
 )
