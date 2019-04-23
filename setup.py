@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='xontrib-xonsh-apipenv',
-    version='0.3.0',
+    version='0.4.0',
     url='https://github.com/deeuu/xonsh-apipenv',
     license='MIT',
     author='Dominic Ward',
