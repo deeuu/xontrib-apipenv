@@ -1,6 +1,6 @@
 # xonsh-apipenv
 
-Automatically activate a [`pipenv`](https://github.com/pypa/pipenv)
+Auto-activate/deactivate a [`pipenv`](https://github.com/pypa/pipenv)
 virtual environment when changing `pipenv` project directories.
 
 - `pipenv shell` does not play nice with `xonsh` (see
@@ -19,22 +19,24 @@ Installation / Usage
 
     ```
     git clone https://github.com/deeuu/xontrib-apipenv.git
-    xpip install ./xonsh-apipenv
+    xpip install ./xontrib-apipenv
     ```
 
 2. Add `xontrib load xonsh-apipenv` to your `.xonshrc`
 
-3. To turn on auto activation with `$AUTO_PIPENV = True`
+3. Turn on auto-activation/deactivation with `$APIPENV = True`
 
 4. Now move to a `pipenv` project directory and watch `vox` automatically
    activate the virtual environment. Move to a second `pipenv` project and the
-   virtual environment will switch
+   virtual environment will switch. An environment will also be activated when
+   moving to a sub-directory of a `pipenv` project, and deactivated when leaving
+   the project directory.
 
 5. Use `vox deactivate` to deactivate
 
 Note:
 If you just want to activate a `pipenv` virtual environment, use the alias
-`vox-activate-pipenv`.
+`apipenv` from within the project (works regardless of `$APIPENV`).
 
 Credits
 ---------
