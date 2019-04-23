@@ -47,11 +47,11 @@ class PipenvActivator():
 
 
 _pa = PipenvActivator()
-aliases['vox-activate-pipenv'] = lambda: _pa._activate()
+aliases['apipenv'] = lambda: _pa._activate()
 
 
 @events.on_chdir
-def _auto_pipenv(olddir, newdir, **kw):
+def _apipenv(olddir, newdir, **kw):
 
-    if 'AUTO_PIPENV' in ${...} and $AUTO_PIPENV:
+    if 'APIPENV' in ${...} and $APIPENV:
         _pa._activate(newdir)
