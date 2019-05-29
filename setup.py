@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='xontrib-xonsh-apipenv',
+    name='xontrib-apipenv',
     version='0.4.0',
     url='https://github.com/deeuu/xonsh-apipenv',
     license='MIT',
@@ -13,4 +13,13 @@ setup(
     package_data={'xontrib': ['*.xsh']},
     platforms='any',
     install_requires=['pipenv>=2018.11.26'],
+    classifiers=[
+        'Environment :: Console',
+        'Intended Audience :: End Users/Desktop',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        'Topic :: Desktop Environment',
+        'Topic :: System :: Shells',
+        'Topic :: System :: System Shells',
+    ]
 )

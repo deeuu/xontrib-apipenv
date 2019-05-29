@@ -30,7 +30,7 @@ Installation / Usage
    activate the virtual environment. Move to a second `pipenv` project and the
    virtual environment will switch. An environment will also be activated when
    moving to a sub-directory of a `pipenv` project, and deactivated when leaving
-   the project directory.
+   the parent project directory in which the `Pipfile` resides.
 
 5. Use `vox deactivate` to deactivate
 
