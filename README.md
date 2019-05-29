@@ -15,8 +15,12 @@ to activate the virtual environment created by `pipenv`
 Installation / Usage
 --------------------
 
-1. Clone the repo and install
+1. Install
 
+    ```
+    xpip install xontrib-apipenv
+    ```
+    or
     ```
     git clone https://github.com/deeuu/xontrib-apipenv.git
     xpip install ./xontrib-apipenv
